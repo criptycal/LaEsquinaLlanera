@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <ui:composition>
+
+        <!-- Main nav -->
+        <nav class="navbar navbar-main navbar-expand-lg navbar-dark bg-primary navbar-border" id="navbar-main">
+            <div class="container-fluid">
+                <!-- Brand + Toggler (for mobile devices) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- User's navbar -->
+                <div class="navbar-user d-lg-none ml-auto">
+                    <ul class="navbar-nav flex-row align-items-center">
+                        <li class="nav-item">
+                            <a href="#" id="boton" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i class="fas fa-search"></i></a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-animate">
+                            <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
+                                <div class="py-3 px-3">
+                                    <h5 class="heading h6 mb-0">Notificaciones</h5>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-primary text-white rounded-circle">AM</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Alex Michael <small class="float-right text-muted">Hace 2 horas</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-warning text-white rounded-circle">SW</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Sandra Wayne <small class="float-right text-muted">Hace 3 horas</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="5 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-info text-white rounded-circle">JM</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Jason Miller <small class="float-right text-muted">5 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-dark text-white rounded-circle">MJ</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Mike Thomson <small class="float-right text-muted">2 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-primary text-white rounded-circle">RN</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Richard Nixon <small class="float-right text-muted">3 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="py-3 text-center">
+                                    <a href="#" class="link link-sm link--style-3">View all notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropdown-animate">
+                            <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="avatar avatar-sm rounded-circle">
+                                    <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/team-9-800x800.jpg"/>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                <h6 class="dropdown-header px-0">Hi, Heather!</h6>
+                                <a href="user/profile.html" class="dropdown-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Mi perfil</span>
+                                </a>
+                                <a href="account/settings.html" class="dropdown-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Configuración</span>
+                                </a>
+                                <a href="account/billing.html" class="dropdown-item">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Billing</span>
+                                </a>
+                                <a href="shop/orders.html" class="dropdown-item">
+                                    <i class="fas fa-shopping-basket"></i>
+                                    <span>Orders</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="authentication/login.html" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Navbar nav -->
+                <div class="collapse navbar-collapse navbar-collapse-fade" id="navbar-main-collapse">
+                    <ul class="navbar-nav align-items-lg-center">
+                        <!-- Home  -->
+                        <li class="nav-item ">
+                            <a class="nav-link pl-lg-0" href="#{request.contextPath}/admin/index.xhtml">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link pl-lg-0" href="#{request.contextPath}/admin/inventario.xhtml">
+                                Inventario
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link pl-lg-0" href="#{request.contextPath}/admin/customer-service.xhtml">
+                                PQRS
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link pl-lg-0" href="#{request.contextPath}/admin/orders.xhtml">
+                                Ventas
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link pl-lg-0" href="#{request.contextPath}/admin/users.xhtml">
+                                Usuarios
+                            </a>
+                        </li>
+                        <!-- Application menu -->
+
+
+                        <li class="border-top opacity-2 my-2"></li>
+                        <!-- Docs menu -->
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="https://preview.webpixels.io/purpose-application-ui-kit/docs/index.html">
+                                Docs
+                            </a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="authentication/register.html">
+                                Register
+                            </a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="authentication/login.html">
+                                Sign in
+                            </a>
+                        </li>
+                    </ul><!-- Right menu -->
+                    <ul class="navbar-nav ml-lg-auto align-items-center d-none d-lg-flex">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i class="fas fa-search"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#modal-chat" class="nav-link nav-link-icon" data-toggle="modal"><i class="fas fa-comment-alt"></i></a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-animate">
+                            <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
+                                <div class="py-3 px-3">
+                                    <h5 class="heading h6 mb-0">Notifications</h5>
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-primary text-white rounded-circle">AM</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Alex Michael <small class="float-right text-muted">2 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-warning text-white rounded-circle">SW</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Sandra Wayne <small class="float-right text-muted">3 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="5 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-info text-white rounded-circle">JM</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Jason Miller <small class="float-right text-muted">5 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-dark text-white rounded-circle">MJ</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Mike Thomson <small class="float-right text-muted">2 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                                            <div>
+                                                <span class="avatar bg-primary text-white rounded-circle">RN</span>
+                                            </div>
+                                            <div class="flex-fill ml-3">
+                                                <div class="h6 text-sm mb-0">Richard Nixon <small class="float-right text-muted">3 hrs ago</small></div>
+                                                <p class="text-sm lh-140 mb-0">
+                                                    Some quick example text to build on the card title.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="py-3 text-center">
+                                    <a href="#" class="link link-sm link--style-3">View all notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropdown-animate">
+                            <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="media media-pill align-items-center">
+                                    <span class="avatar rounded-circle">
+                                        <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/team-9-800x800.jpg"/>
+                                    </span>
+                                    <div class="ml-2 d-none d-lg-block">
+                                        <span class="mb-0 text-sm  font-weight-bold">David Salamanca</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                <h6 class="dropdown-header px-0">Hola, David!</h6>
+                                <a href="#!" class="dropdown-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Mi Perfil</span>
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Configuración</span>
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Facturación</span>
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <span>Actividad</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="../../../index.html" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Salir</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </ui:composition>
+
+
+</html>
+

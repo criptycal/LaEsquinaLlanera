@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition>
+
+        <div class="modal-quick-view modal fade" id="quick-view" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Pizza with Salami and Olives</h4>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Product gallery-->
+                            <div class="col-lg-7 col-md-6 pr-lg-0"><img src="#{request.contextPath}/img/food-delivery/restaurants/single/large-preview.jpg" alt="Pizza"/>
+                            </div>
+                            <!-- Product details-->
+                            <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                                <div class="product-details ml-auto pb-3">
+                                    <div class="mb-3"><span class="h3 font-weight-normal text-accent mr-1">$15.<small>99</small></span></div>
+                                    <form class="mb-grid-gutter">
+                                        <div class="row mx-n2">
+                                            <div class="col-6 px-2">
+                                                <div class="form-group">
+                                                    <label class="font-weight-medium pb-1" for="pizza-size">Size:</label>
+                                                    <select class="custom-select" id="pizza-size">
+                                                        <option value="small">Small</option>
+                                                        <option value="medium">Medium</option>
+                                                        <option value="large">Large</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 px-2">
+                                                <div class="form-group">
+                                                    <label class="font-weight-medium pb-1" for="pizza-base">Base:</label>
+                                                    <select class="custom-select" id="pizza-base">
+                                                        <option value="standard">Standard</option>
+                                                        <option value="thin">Thin</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <select class="custom-select mr-3" style="width: 5rem;">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                            <button class="btn btn-primary btn-shadow btn-block" type="submit"><i class="czi-cart font-size-lg mr-2"></i>Add to Cart</button>
+                                        </div>
+                                    </form>
+                                    <h5 class="h6 mb-3 pb-3 border-bottom"><i class="czi-announcement text-muted font-size-lg align-middle mt-n1 mr-2"></i>Product info</h5>
+                                    <h6 class="font-size-sm mb-2">Ingredients:</h6>
+                                    <p class="font-size-sm">Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan</p>
+                                    <h6 class="font-size-sm mb-2">Allergies</h6>
+                                    <p class="font-size-sm">Gluten, Dairy</p>
+                                    <h6 class="font-size-sm mb-2">Calories</h6>
+                                    <p class="font-size-sm mb-0">811</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page title-->
+        <!-- Page Content-->
+        <!-- Page title-->
+        <section class="bg-darker bg-size-cover bg-position-center py-5" style="background-image: url(img/);">
+            <div class="container py-md-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
+                        <li class="breadcrumb-item"><a class="text-nowrap" href="../../index.html"><i class="czi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item text-nowrap active" aria-current="page">Menu</li>
+                    </ol>
+                </nav>
+                <h1 class="text-light text-center text-lg-left py-3">Menu</h1>
+            </div>
+        </section>
+        <!-- Page navigation-->
+        <nav class="container mt-n5">
+            <div class="media align-items-center bg-white rounded-lg box-shadow-lg py-2 pl-sm-2 pr-4 pr-lg-2">
+                <img class="d-block rounded-lg mr-lg-3" width="150" src="#{request.contextPath}/assets/front_end/components/Artboard-1.png" alt="Brand"/>
+                <div class="media-body text-right">
+                    <!-- For desktop-->
+                    <ul class="nav nav-tabs d-none d-lg-flex border-0 mb-0">
+                        <li class="nav-item"><a class="nav-link" href="platos.xhtml">Dishes</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Drinks</a></li>
+                        <li class="nav-item"><a class="nav-link" href="complementos.xhtml">Complements</a></li>
+                    </ul>
+                    <!-- For mobile-->
+                    <div class="btn-group dropdown d-lg-none ml-auto">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="czi-menu font-size-base mr-2"></i>Menu</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item font-size-base" href="">Dishes</a>
+                            <a class="dropdown-item font-size-base" href="complementos.html">Complements</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu (Products grid)-->
+        <section class="container tab-content py-4 py-sm-5">
+            <h2 class="text-center pt-2 pt-sm-0 mb-sm-5">${path}</h2>
+            <div class="row pt-3 pt-sm-0">
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/7up.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">7UP Gaseosa</a></h3>
+                            <p class="font-size-ms text-muted">Bebida gaseosa</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$12.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/coke.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">Cocacola Gaseosa</a></h3>
+                            <p class="font-size-ms text-muted">Bebida Gaseosa</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$14.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/pepsi.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">Pepsi Gaseosa</a></h3>
+                            <p class="font-size-ms text-muted">Bebida Gaseosa</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$15.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/coffee-2714970_1920.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">Café</a></h3>
+                            <p class="font-size-ms text-muted">Bebida Caliente</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$14.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/water bottle.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">Agua</a></h3>
+                            <p class="font-size-ms text-muted">Bebida Refrescante</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$10.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/fanta.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">Fanta</a></h3>
+                            <p class="font-size-ms text-muted">Bebida Gaseosa</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$15.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/aromatica.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">Aromática</a></h3>
+                            <p class="font-size-ms text-muted">Bebida Caliente</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$14.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card product-card border pb-2">
+                        <a class="d-block" href="#quick-view" data-toggle="modal"><img class="card-img-top" src="#{request.contextPath}/assets/front_end/img/food-delivery/restaurants/single/bebidas/milk-3176015_1920.jpg" alt="Pizza"/></a>
+                        <div class="card-body pt-1 pb-2">
+                            <h3 class="product-title font-size-md"><a href="#quick-view" data-toggle="modal">Jugo de Frutas</a></h3>
+                            <p class="font-size-ms text-muted">Bebida Refrescante</p>
+
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="product-price"><span class="text-accent">$16.99</span></div>
+                                <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast">+<i class="czi-cart font-size-base ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Load more button-->
+            <nav class="d-md-flex justify-content-between align-items-center text-center text-md-left pt-2 pb-4 mb-md-2" aria-label="Page navigation">
+                <div class="d-md-flex align-items-center w-100">
+                    <span class="font-size-sm text-muted mr-md-3">Showing 8 of 24 items</span>
+                    <div class="progress w-100 my-3 mx-auto mx-md-0" style="max-width: 10rem; height: 4px;">
+                        <div class="progress-bar bg-dark" role="progressbar" style="width: 18%;" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <button class="btn btn-outline-secondary" type="button">Load more items</button>
+            </nav>
+        </section>
+        <!-- Toast: Added to Cart-->
+        <div class="toast-container toast-bottom-center">
+            <div class="toast mb-3" id="cart-toast" data-delay="5000" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header bg-success text-white">
+                    <i class="czi-check-circle mr-2"></i>
+                    <h6 class="font-size-sm text-white mb-0 mr-auto">Added to cart!</h6>
+                    <button class="close text-white ml-2 mb-1" type="button" data-dismiss="toast" aria-label="Close"><span aria-hidden="true"></span></button>
+                </div>
+                <div class="toast-body">This item has been added to your cart.</div>
+            </div>
+        </div>
+
+    </ui:composition>
+
+</html>

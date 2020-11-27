@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <ui:composition>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal-change-username" tabindex="-1" role="dialog" aria-labelledby="modal-change-username" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <form>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title d-flex align-items-center" id="modal-title-change-username">
+                                <div>
+                                    <div class="icon icon-sm icon-shape icon-info rounded-circle shadow mr-3">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Register User</h6>
+                                </div>
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label class="form-control-label">Email address</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <input type="email" class="form-control" id="input-email" placeholder="name@example.com"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Name</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User name"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Last name</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User last name"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Phone number</label>
+                                    <input type="text" class="form-control input-mask" data-mask="0000 000 000" placeholder="0720 444 555"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Phone number (optional)</label>
+                                    <input type="text" class="form-control input-mask" data-mask="0000 0000" placeholder="5555 6666"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label">Address</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User address"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Neighborhood</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User Neighborhood"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label">DNI User</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User DNI"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">User ROL</label>
+                                    <select class="custom-select">
+                                        <option selected="true">Administrador</option>
+                                        <option value="1">Mesero</option>
+                                        <option value="2">Cajero</option>
+                                        <option value="3">Domiciliario</option>
+                                        <option value="4">Cliente</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="form-control-label">Password</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input type="password" class="form-control" id="input-password" placeholder="********"/>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <a href="#" data-toggle="password-text" data-target="#input-password">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-sm btn-primary btn-icon rounded-pill">
+                                <span class="btn-inner--text">Create user</span>
+                                <span class="btn-inner--icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- edit user Modal -->
+        <div class="modal fade" id="modal-edit-user" tabindex="-1" role="dialog" aria-labelledby="modal-edit-user" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <form>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title d-flex align-items-center" id="modal-title-change-username">
+                                <div>
+                                    <div class="icon icon-sm icon-shape icon-info rounded-circle shadow mr-3">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Edit User</h6>
+                                </div>
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label class="form-control-label">Email address</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <input type="email" class="form-control" id="input-email" placeholder="name@example.com"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Name</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User name"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Last name</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User last name"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Phone number</label>
+                                    <input type="text" class="form-control input-mask" data-mask="0000 000 000" placeholder="0720 444 555"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Phone number (optional)</label>
+                                    <input type="text" class="form-control input-mask" data-mask="0000 0000" placeholder="5555 6666"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label">Address</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User address"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Neighborhood</label>
+                                    <input type="text" class="form-control input-mask" placeholder="User Neighborhood"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label">DNI User</label>
+                                    <input type="text" class="form-control input-mask"  placeholder="User DNI"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">User ROL</label>
+                                    <select class="custom-select">
+                                        <option selected="true">Cliente</option>
+                                        <option value="1">Mesero</option>
+                                        <option value="2">Cajero</option>
+                                        <option value="3">Domiciliario</option>
+                                        <option value="4">Administrador</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="form-control-label">Password</label>
+                                    <div class="input-group input-group-merge">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input type="password" class="form-control" id="input-password" placeholder="********"/>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <a href="#" data-toggle="password-text" data-target="#input-password">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-sm btn-primary btn-icon rounded-pill">
+                                <span class="btn-inner--text">Edit user</span>
+                                <span class="btn-inner--icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- Page title -->
+            <div class="page-title">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+                        <!-- Page title + Go Back button -->
+                        <div class="d-inline-block">
+                            <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Usuarios</h5>
+                        </div>
+                        <!-- Additional info -->
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+                        <div class="actions actions-dark d-inline-block">
+                            <a href="#" class="action-item ml-md-4" id="button-a">
+                                <i class="fas fa-file-export mr-2"></i>Exportar
+                            </a>
+                            <a href="#" class="action-item ml-3">
+                                <i class="fas fa-cog mr-2"></i>Configuración
+                            </a>
+                        </div>
+                        <div style="margin: 0px 0px 0px 20px">
+                            <button type="button" class="btn btn-primary btn-icon-only" data-toggle="modal" data-target="#modal-change-username">
+                                <span class="btn-inner--icon">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header actions-toolbar border-0">
+                    <div class="actions-search" id="actions-search">
+                        <div class="input-group input-group-merge input-group-flush">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ..."/>
+                            <div class="input-group-append">
+                                <a href="#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="fas fa-times"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <h6 class="d-inline-block mb-0">Usuarios</h6>
+                        </div>
+                        <div class="col text-right">
+                            <div class="actions"><a href="#" class="action-item mr-3" data-action="search-open" data-target="#actions-search"><i class="fas fa-search"></i></a>
+                                <div class="dropdown mr-3">
+                                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-filter"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sort-amount-down"></i>Newest
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sort-alpha-down"></i>From A-Z
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sort-alpha-up"></i>From Z-A
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown" data-toggle="dropdown">
+                                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item">Recargar</a>
+                                        <a href="#" class="dropdown-item">Configuración</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center" id="mytable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">DNI</th>
+                                <th scope="col">State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <a href="#" class="name h6 mb-0 text-sm">John Sullivan</a>
+                                </th>
+                                <td>
+                                    Calle, carrera
+                                </td>
+                                <td>
+                                    154644
+                                </td>
+                                <td>
+                                    usuario@mail.com
+                                </td>
+                                <td>
+                                    1039940186
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="true"/>
+                                            <label class="custom-control-label" for="customSwitch1">Active/Suspended</label>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <!-- Actions -->
+                                    <div class="actions ml-3">
+                                        <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Quick view">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="#" class="action-item mr-2" title="Edit" data-toggle="modal" data-target="#modal-edit-user">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="Move to trash">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <a href="#" class="name h6 mb-0 text-sm">John Sullivan</a>
+                                </th>
+                                <td>
+                                    Calle, carrera
+                                </td>
+                                <td>
+                                    154644
+                                </td>
+                                <td>
+                                    usuario@mail.com
+                                </td>
+                                <td>
+                                    1039940186
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch2" checked="true"/>
+                                            <label class="custom-control-label" for="customSwitch2">Active/Suspended</label>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <!-- Actions -->
+                                    <div class="actions ml-3">
+                                        <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Quick view">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="#" class="action-item mr-2" title="Edit" data-toggle="modal" data-target="#modal-edit-user">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="Move to trash">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Load more -->
+            <div class="mt-4 text-center">
+                <a href="#" class="btn btn-sm btn-neutral rounded-pill shadow hover-translate-y-n3">Load more ...</a>
+            </div>
+        </div>
+
+    </ui:composition>
+
+
+</html>
+

@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <ui:composition>
+
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- Page title -->
+            <div class="page-title">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h5 class="h3 font-weight-400 mb-0 text-white">Administrador</h5>
+                        <span class="text-sm text-white opacity-8">Dashboard</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-8 col-md-6">
+                    <div class="card card-fluid">
+                        <div class="card-header">
+                            <h6 class="mb-0">Ventas Mensuales</h6>
+                        </div>
+                        <div class="card-body">
+                            <!-- Chart -->
+                            <div id="apex-engagement" data-color="success" data-height="280"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card card-fluid">
+                        <div class="card-body text-center d-flex flex-column justify-content-center">
+                            <h5 class="mb-4">PQRS</h5>
+                            <div class="progress-circle progress-lg mx-auto" id="progress-5" data-progress="50" data-text="98" data-textclass="h1" data-color="success"></div>
+                            <div class="d-flex mt-4">
+                                <div class="col">
+                                    <span class="d-block badge badge-dot badge-lg h6">
+                                        <i class="bg-danger"></i>13 peticiones
+                                    </span>
+                                    <span class="d-block badge badge-dot badge-lg h6">
+                                        <i class="bg-success"></i>7 quejas
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <span class="d-block badge badge-dot badge-lg h6">
+                                        <i class="bg-warning"></i>12 reclamos
+                                    </span>
+                                    <span class="d-block badge badge-dot badge-lg h6">
+                                        <i class="bg-danger"></i>5 sugerencias
+                                    </span>
+                                </div>
+                            </div>
+                            <a href="resources/front-end/application/task/kanban-board.html" class="btn btn-block btn-secondary mt-auto">Abrir PQRS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-7 d-sm-flex flex-sm-column">
+                    <div class="row flex-sm-fill">
+                        <div class="col-sm-4">
+                            <div class="card card-fluid">
+                                <div class="card-body text-center">
+                                    <div class="avatar-parent-child">
+                                        <a href="#" class="avatar avatar-lg rounded-circle">
+                                            <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/team-1-800x800.jpg"/>
+                                        </a>
+                                        <span class="avatar-child avatar-badge bg-success"></span>
+                                    </div>
+                                    <h5 class="h6 mt-4 mb-0">Maria Sh</h5>
+                                    <a href="#" class="d-block text-sm text-muted mb-3">Auxiliar de cocina</a>
+                                    <div class="actions d-flex justify-content-between px-4">
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-share-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card card-fluid">
+                                <div class="card-body text-center">
+                                    <div class="avatar-parent-child">
+                                        <a href="#" class="avatar avatar-lg rounded-circle">
+                                            <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/team-4-800x800.jpg"/>
+                                        </a>
+                                        <span class="avatar-child avatar-badge bg-warning"></span>
+                                    </div>
+                                    <h5 class="h6 mt-4 mb-0">Juan F</h5>
+                                    <a href="#" class="d-block text-sm text-muted mb-3">Mesero</a>
+                                    <div class="actions d-flex justify-content-between px-4">
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-share-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card card-fluid">
+                                <div class="card-body text-center">
+                                    <div class="avatar-parent-child">
+                                        <a href="#" class="avatar avatar-lg rounded-circle">
+                                            <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/team-7-800x800.jpg"/>
+                                        </a>
+                                        <span class="avatar-child avatar-badge bg-danger"></span>
+                                    </div>
+                                    <h5 class="h6 mt-4 mb-0">Larry M</h5>
+                                    <a href="#" class="d-block text-sm text-muted mb-3">Domiciliario</a>
+                                    <div class="actions d-flex justify-content-between px-4">
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-share-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-sm-fill">
+                        <div class="col-sm-4">
+                            <div class="card card-fluid">
+                                <div class="card-body text-center">
+                                    <div class="avatar-parent-child">
+                                        <a href="#" class="avatar avatar-lg rounded-circle">
+                                            <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/thumb-1.jpg"/>
+                                        </a>
+                                        <span class="avatar-child avatar-badge bg-success"></span>
+                                    </div>
+                                    <h5 class="h6 mt-4 mb-0">Laura Leon</h5>
+                                    <a href="#" class="d-block text-sm text-muted mb-3">Cajero</a>
+                                    <div class="actions d-flex justify-content-between px-4">
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-share-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card card-fluid">
+                                <div class="card-body text-center">
+                                    <div class="avatar-parent-child">
+                                        <a href="#" class="avatar avatar-lg rounded-circle">
+                                            <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/team-9-800x800.jpg"/>
+                                        </a>
+                                        <span class="avatar-child avatar-badge bg-success"></span>
+                                    </div>
+                                    <h5 class="h6 mt-4 mb-0">David S.</h5>
+                                    <a href="#" class="d-block text-sm text-muted mb-3">Desarrollador</a>
+                                    <div class="actions d-flex justify-content-between px-4">
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-share-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card card-fluid">
+                                <div class="card-body text-center">
+                                    <div class="avatar-parent-child">
+                                        <a href="#" class="avatar avatar-lg rounded-circle">
+                                            <img alt="Image placeholder" src="#{request.contextPath}/resources/front-end/assets/img/theme/light/team-6-800x800.jpg"/>
+                                        </a>
+                                        <span class="avatar-child avatar-badge bg-warning"></span>
+                                    </div>
+                                    <h5 class="h6 mt-4 mb-0">Julian M</h5>
+                                    <a href="#" class="d-block text-sm text-muted mb-3">Proveedor&nbsp;</a>
+                                    <div class="actions d-flex justify-content-between px-4">
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-phone"></i>
+                                        </a>
+                                        <a href="#" class="action-item">
+                                            <i class="fas fa-share-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <!-- Calendar -->
+                    <div class="card widget-calendar">
+                        <div class="card-header">
+                            <div class="text-sm text-muted mb-1 widget-calendar-year"></div>
+                            <div class="h5 mb-0 widget-calendar-day">Sábado, Sep 12</div>
+                        </div>
+                        <!-- Calendar -->
+                        <div data-toggle="widget-calendar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ui:composition>
+
+
+</html>
+

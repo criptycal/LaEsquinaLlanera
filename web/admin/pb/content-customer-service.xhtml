@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <ui:composition>
+
+        <div class="page-content">
+            <!-- Page title -->
+            <div class="page-title">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+                        <!-- Page title + Go Back button -->
+                        <div class="d-inline-block">
+                            <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Servicio al Cliente</h5>
+                        </div>
+                        <!-- Additional info -->
+                        <div class="align-items-center ml-4 d-inline-flex">
+                            <span class="h4 text-info mb-0 mr-2">9</span>
+                            <span class="text-sm opacity-7 text-white">Nuevas entradas</span>
+                        </div>
+                        <!-- Optional link -->
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+                        <div class="actions actions-dark d-inline-block">
+                            <a href="" class="action-item ml-md-4" id="button-a">
+                                <i class="fas fa-file-export mr-2"></i>Exportar
+                            </a>
+                            <a href="#" class="action-item ml-3">
+                                <i class="fas fa-cog mr-2"></i>Configuración
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-toggle="dragula" data-containers="[&quot;card-list-1&quot;, &quot;card-list-2&quot;, &quot;card-list-3&quot;]">
+                <!-- Card header -->
+                <div class="card-header actions-toolbar">
+                    <div class="actions-search" id="actions-search">
+                        <div class="input-group input-group-merge input-group-flush">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ..."/>
+                            <div class="input-group-append">
+                                <a href="#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="fas fa-times"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <h6 class="d-inline-block mb-0">Tabla PQRS</h6>
+                        </div>
+                        <div class="col text-right">
+                            <div class="actions">
+                                <a href="#" class="action-item mr-3" data-action="search-open" data-target="#actions-search"><i class="fas fa-search"></i></a>
+                                <div class="dropdown mr-3">
+                                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-filter"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sort-amount-down"></i>Newest
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sort-alpha-down"></i>From A-Z
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-sort-alpha-up"></i>From Z-A
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown" data-toggle="dropdown">
+                                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#" class="dropdown-item">Refresh</a>
+                                        <a href="#" class="dropdown-item">Manage Widgets</a>
+                                        <a href="#" class="dropdown-item">Settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card body -->
+                <div class="table-responsive">
+                    <table class="table table-cards align-items-center" id="mytable">
+                        <thead>
+                            <tr>
+
+                                <th scope="col" class="sort" data-sort="name">Usuario</th>
+                                <th scope="col" class="sort" data-sort="name">Título</th>
+                                <th scope="col" class="sort" data-sort="budget">Fecha registro</th>
+                                <th scope="col" class="sort" data-sort="status">Fecha actualización</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col" class="sort" data-sort="completion">Prioridad</th>
+                                <th scope="col" class="sort" data-sort="completion">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row" id="usuario-pqrs">
+                                    <a href="product.html"  class="name h6 mb-0 text-sm">NombreUsuario</a>
+                                </th>
+                                <td id="tituloPQRS">
+                                    No tengo tiempo
+                                </td>
+                                <td>
+                                    <span class="badge-dot mr-4" id="fecha-registroPQRS">
+                                        10/05/2020
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="text-sm" id="fecha-actualizacionPQRS">12/05/2020</span>
+                                </td>
+                                <td>
+                                    <span class="text-sm badge-dot mr-4" id="fecha-actualizacionPQRS">Petición</span>
+                                </td>
+                                <td>
+                                    <span class="badge badge-dot">
+                                        <i class="bg-danger"></i> Urgente
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge badge-dot">
+                                        <i class="bg-success"></i> Abierto
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr class="table-divider"></tr>
+                        </tbody>
+                    </table>
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center" style="padding: 1rem;">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ui:composition>
+
+
+</html>
+

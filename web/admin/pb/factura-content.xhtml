@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <ui:composition>
+
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- Page title -->
+            <div class="page-title">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+                        <!-- Page title + Go Back button -->
+                        <div class="d-inline-block">
+                            <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Orden de pago #ABC011101s</h5>
+                        </div>
+                        <!-- Additional info -->
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+                        <div class="actions actions-dark d-inline-block">
+                            <a href="#" class="action-item ml-md-4" id="button-a">
+                                <i class="fas fa-file-export mr-2"></i>Exportar
+                            </a>
+                            <a href="#" class="action-item ml-3">
+                                <i class="fas fa-cog mr-2"></i>Configuración
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Listing -->
+            <div class="card card-body p-md-5">
+                <div class="row align-items-center mb-5">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <img src="#{request.contextPath}/assets/front_end/components/logo-01011.png" alt="" height="39"/>
+                    </div>
+                    <div class="col-sm-6 text-sm-right">
+                        <h6 class="d-inline-block m-0 d-print-none">Orden de Pago</h6>
+                        <span class="badge badge-pill badge-success ml-3">Pagado</span>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-lg-6 col-md-8">
+                        <h6 class="">Hola, nombreUsuario,</h6>
+                        <p class="text-sm">
+                            Gracias por tu compra, tu ID orden de compra es <b>ABC011101s</b> ha sido registrado exitosamente en nuestro sistema, vamos a asegurarnos de que tu pedido llegue rápido y a tiempo a tu dirección
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Lista de productos</h5>
+                        <!-- Table -->
+                        <div class="table-responsive">
+                            <table class="table mb-0" id="mytable">
+                                <thead>
+                                    <tr>
+                                        <th class="px-0 bg-transparent border-top-0">Descripción</th>
+                                        <th class="px-0 bg-transparent border-top-0">Cantidad</th>
+                                        <th class="px-0 bg-transparent border-top-0 text-right">Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="px-0">
+                                            <span class="h6 text-sm">Plato01</span>
+                                        </td>
+                                        <td class="px-0">
+                                            3
+                                        </td>
+                                        <td class="px-0 text-right">
+                                            $19,500
+                                        </td>
+                                        <td class="text-right">
+                                            <!-- Actions -->
+                                            <div class="actions ml-3">
+                                                <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Edit">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="Move to trash">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-0">
+                                            <span class="h6 text-sm">Gaseosa Cocacola</span>
+                                        </td>
+                                        <td class="px-0">
+                                            6
+                                        </td>
+                                        <td class="px-0 text-right">
+                                            $7,500
+                                        </td>
+                                        <td class="text-right">
+                                            <!-- Actions -->
+                                            <div class="actions ml-3">
+                                                <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Edit">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="Move to trash">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-0">
+                                            <span class="h6 text-sm">Empanadas</span>
+                                        </td>
+                                        <td class="px-0">
+                                            9
+                                        </td>
+                                        <td class="px-0 text-right">
+                                            $15,500
+                                        </td>
+                                        <td class="text-right">
+                                            <!-- Actions -->
+                                            <div class="actions ml-3">
+                                                <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Edit">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="Move to trash">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-0">
+                                            <span class="h6 text-sm">Papas Fritas</span>
+                                        </td>
+                                        <td class="px-0">
+                                            1
+                                        </td>
+                                        <td class="px-0 text-right">
+                                            $2,500
+                                        </td>
+                                        <td class="text-right">
+                                            <!-- Actions -->
+                                            <div class="actions ml-3">
+                                                <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Edit">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-item text-danger mr-2" data-toggle="tooltip" title="Move to trash">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card my-5 bg-secondary">
+                            <div class="card-body">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                                        <div class="d-flex align-items-center justify-content-md-end">
+                                            <span class="h6 text-muted d-inline-block mr-3 mb-0">Valor Total:</span>
+                                            <span class="h4 mb-0">$45000 COP</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 order-md-1">
+                                        <button type="button" class="btn btn-sm btn-success">Agregar Productos</button>
+                                        <button type="button" class="btn btn-sm btn-success">Descargar</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h5>Datos de envío</h5>
+                        <dl class="row mt-4 align-items-center">
+                            <dt class="col-sm-3 h6 text-sm">Cliente</dt>
+                            <dd class="col-sm-9 text-sm">nombreUsuario</dd>
+                            <dt class="col-sm-3 h6 text-sm">Teléfono</dt>
+                            <dd class="col-sm-9 text-sm">+57 509685</dd>
+                            <dt class="col-sm-3 h6 text-sm">Dirección</dt>
+                            <dd class="col-sm-9 text-sm">AV 98 C 21 - 19</dd>
+                            <dt class="col-sm-3 h6 text-sm">Barrio</dt>
+                            <dd class="col-sm-9 text-sm">nombreBarrio</dd>
+
+                            <dt class="col-sm-3 h6 text-sm">Email</dt>
+                            <dd class="col-sm-9 text-sm">cliente@mail.com</dd>
+                        </dl>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h5>Datos de Orden</h5>
+                        <dl class="row mt-4 align-items-center">
+                            <dt class="col-sm-4 h6 text-sm">Comprador</dt>
+                            <dd class="col-sm-9 text-sm">nombreComprador</dd>
+                            <dt class="col-sm-4 h6 text-sm">Teléfono</dt>
+                            <dd class="col-sm-9 text-sm">+57 509685</dd>
+                            <dt class="col-sm-4 h6 text-sm">Dirección</dt>
+                            <dd class="col-sm-9 text-sm">AV 98 C 21 - 19</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ui:composition>
+
+
+</html>
+

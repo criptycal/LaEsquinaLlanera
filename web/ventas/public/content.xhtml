@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+    <ui:composition>
+
+
+        <!-- Page title-->
+        <!-- Page Content-->
+        <div class="container pt-4 pb-3 py-sm-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb flex-lg-nowrap justify-content-center justify-content-lg-start">
+                    <li class="breadcrumb-item"><a class="text-nowrap" href="#{request.contextPath}/index.xhtml"><i class="czi-home"></i>Home</a></li>
+                    <li class="breadcrumb-item text-nowrap active" aria-current="page">Cart</li>
+                </ol>
+            </nav>
+            <div class="rounded-lg box-shadow-lg mt-4 mb-5">
+                <ul class="nav nav-tabs nav-justified mb-4">
+                    <li class="nav-item"><a class="nav-link font-size-lg font-weight-medium py-4 active" href="#">1. Order</a></li>
+                    <li class="nav-item"><a class="nav-link font-size-lg font-weight-medium py-4" href="checkout.xhtml">2. Checkout</a></li>
+                </ul>
+                <div class="px-3 px-sm-4 px-xl-5 pt-1 pb-4 pb-sm-5">
+                    <div class="row">
+                        <!-- Items in cart-->
+                        <div class="col-lg-8 col-md-7 pt-sm-2">
+                            <!-- Item-->
+                            <div class="d-sm-flex justify-content-between align-items-center mt-3 mb-4 pb-3 border-bottom">
+                                <div class="media media-ie-fix d-block d-sm-flex align-items-center text-center text-sm-left"><a class="d-inline-block mx-auto mr-sm-4" href="#" style="width: 7.5rem;"><img src="#{request.contextPath}/assets/front_end/img/food-delivery/cart/01.jpg" alt="Pizza"/></a>
+                                    <div class="media-body pt-2">
+                                        <h3 class="product-title font-size-base mb-2"><a href="#">Pizza Pepperoni with Tomatoes</a></h3>
+                                        <div class="font-size-sm"><span class="text-muted mr-2">Size:</span>Medium</div>
+                                        <div class="font-size-sm"><span class="text-muted mr-2">Base:</span>Standard</div>
+                                        <div class="font-size-lg text-accent pt-2">$9.<small>00</small></div>
+                                    </div>
+                                </div>
+                                <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 9rem;">
+                                    <div class="form-group mb-0">
+                                        <label class="font-weight-medium" for="quantity1">Quantity</label>
+                                        <input class="form-control" type="number" id="quantity1" value="1"/>
+                                    </div>
+                                    <button class="btn btn-link px-0 text-danger" type="button"><i class="czi-close-circle mr-2"></i><span class="font-size-sm">Remove</span></button>
+                                </div>
+                            </div>
+                            <!-- Item-->
+                            <div class="d-sm-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+                                <div class="media media-ie-fix d-block d-sm-flex align-items-center text-center text-sm-left"><a class="d-inline-block mx-auto mr-sm-4" href="#" style="width: 7.5rem;"><img src="#{request.contextPath}/assets/front_end/img/food-delivery/cart/02.jpg" alt="Burger"/></a>
+                                    <div class="media-body pt-2">
+                                        <h3 class="product-title font-size-base mb-2"><a href="#">Beef Burger with Fries</a></h3>
+                                        <div class="font-size-sm"><span class="text-muted mr-2">Size:</span>XL</div>
+                                        <div class="font-size-sm"><span class="text-muted mr-2">Sauce:</span>Barbeque</div>
+                                        <div class="font-size-lg text-accent pt-2">$12.<small>00</small></div>
+                                    </div>
+                                </div>
+                                <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 9rem;">
+                                    <div class="form-group mb-0">
+                                        <label class="font-weight-medium" for="quantity2">Quantity</label>
+                                        <input class="form-control" type="number" id="quantity2" value="1"/>
+                                    </div>
+                                    <button class="btn btn-link px-0 text-danger" type="button"><i class="czi-close-circle mr-2"></i><span class="font-size-sm">Remove</span></button>
+                                </div>
+                            </div>
+                            <!-- Item-->
+                            <div class="d-sm-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+                                <div class="media media-ie-fix d-block d-sm-flex align-items-center text-center text-sm-left"><a class="d-inline-block mx-auto mr-sm-4" href="#" style="width: 7.5rem;"><img src="#{request.contextPath}/assets/front_end/img/food-delivery/cart/03.jpg" alt="Drink"/></a>
+                                    <div class="media-body pt-2">
+                                        <h3 class="product-title font-size-base mb-2"><a href="#">Coca Cola Can, 335ml</a></h3>
+                                        <div class="font-size-sm"><span class="text-muted mr-2">Size:</span>335ml</div>
+                                        <div class="font-size-lg text-accent pt-2">$1.<small>00</small></div>
+                                    </div>
+                                </div>
+                                <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 9rem;">
+                                    <div class="form-group mb-0">
+                                        <label class="font-weight-medium" for="quantity3">Quantity</label>
+                                        <input class="form-control" type="number" id="quantity3" value="3"/>
+                                    </div>
+                                    <button class="btn btn-link px-0 text-danger" type="button"><i class="czi-close-circle mr-2"></i><span class="font-size-sm">Remove</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sidebar-->
+                        <div class="col-lg-4 col-md-5 pt-3 pt-sm-4">
+                            <div class="rounded-lg bg-secondary px-3 px-sm-4 py-4">
+                                <div class="text-center mb-4 pb-3 border-bottom">
+                                    <h3 class="h5 mb-3 pb-1">Total</h3>
+                                    <h4 class="font-weight-normal">$24.<small>00</small></h4>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="mb-3" for="order-comments"><span class="badge badge-info font-size-xs mr-2">Note</span><span class="font-weight-medium">Additional comments</span></label>
+                                    <textarea class="form-control" rows="4" id="order-comments"></textarea>
+                                </div>
+                                <h3 class="h6 mb-4">Apply promo code</h3>
+                                <form class="needs-validation" method="post" novalidate='true'>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Promo code" required="true"/>
+                                            <div class="invalid-feedback">Please provide promo code.</div>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-block" type="submit">Apply promo code</button>
+                                </form><a class="btn btn-success btn-shadow btn-block mt-4 mb-3" href="checkout.xhtml"><i class="czi-card font-size-lg mr-2"></i>Proceed to Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </ui:composition>
+
+</html>

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="La esquina llanera webadmin page"/>
+        <meta name="author" content="GAES-8"/>
+        <title>La Esquina Llanera | Dashboard Administrador</title>
+        <!-- Favicon -->
+        <link rel="icon" href="#{request.contextPath}/img/logo_1.png" type="image/png" sizes="16x16"/>
+        <!-- Font Awesome 5 -->
+        <link rel="stylesheet" href="#{request.contextPath}/resources/fontawesome-free-5.14.0-web/css/all.css"/><!-- Page CSS -->
+        <link rel="stylesheet" href="#{request.contextPath}/resources/front-end/assets/libs/fullcalendar/dist/fullcalendar.min.css"/>
+        <!-- Purpose CSS -->
+        <link rel="stylesheet" href="#{request.contextPath}/resources/front-end/assets/css/purpose.css" id="stylesheet"/>
+    </h:head>
+
+    <h:body class="application application-offset">
+
+        <div class="container-fluid container-application">
+
+            <ui:insert name="sidenav">
+                <ui:include src="sidenav.xhtml"></ui:include>
+            </ui:insert>
+
+            <div class="main-content position-relative">
+
+                <ui:insert name="top">
+                    <ui:include src="header.xhtml"></ui:include>
+                </ui:insert>
+
+                <ui:insert name="content">
+                    <ui:include src="content.xhtml"></ui:include>
+                </ui:insert>
+
+                <ui:insert name="bottom">
+                    <ui:include src="footer.xhtml"></ui:include>
+                </ui:insert>
+
+
+            </div>
+
+
+        </div>
+
+        <!-- Scripts -->
+        <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+        <script src="#{request.contextPath}/resources/front-end/assets/js/purpose.core.js"></script>
+        <!-- Page JS -->
+        <script src="#{request.contextPath}/resources/front-end/assets/libs/progressbar.js/dist/progressbar.min.js"></script>
+        <script src="#{request.contextPath}/resources/front-end/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+        <script src="#{request.contextPath}/resources/front-end/assets/libs/autosize/dist/autosize.min.js"></script>
+        <script src="#{request.contextPath}/resources/front-end/assets/libs/moment/min/moment.min.js"></script>
+        <script src="#{request.contextPath}/resources/front-end/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+        <!-- Purpose JS -->
+        <script src="#{request.contextPath}/resources/front-end/assets/js/purpose.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-104437451-1"></script>
+        <script src="#{request.contextPath}/resources/jquery.js"></script>
+        <!-- sheetJS -->
+        <script src="#{request.contextPath}/node_modules/xlsx/xlsx.mini.js"></script>
+        <!-- FileSaver -->
+        <script src="#{request.contextPath}/node_modules/file-saver/dist/FileSaver.min.js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', '');
+
+        </script>
+        <!-- exportTableWithSheetJS -->
+<!--        <script>
+
+            var wb = XLSX.utils.table_to_book(document.getElementById('mytable'), {sheet: "Sheet JS"});
+            var wbout = XLSX.write(wb, {booktype: 'xlsx', bookSST: true, type: 'binary'});
+
+            function s2ab(s) {
+
+                var buf = new ArrayBuffer(s.length);
+                var view = new Uint8Array(buf);
+                for (var i = 0; i < s.length; i++)
+                    view[i] = s.charCodeAt(i) & 0xFF;
+                return buf;
+            }
+
+            $("#button-a").click(function () {
+                saveAs(new Blob([s2ab(wbout)], {type: "application/octet-stream"}), 'test.xlsx')
+            });
+
+
+        </script>-->
+    </h:body>
+
+</html>
